@@ -3,3 +3,4 @@
 /* eslint-disable */
 export * as privateErc20 from "./PrivateERC20";
 export * as privateErc721 from "./PrivateERC721";
+export { PERCI__factory } from "./PERCI__factory";

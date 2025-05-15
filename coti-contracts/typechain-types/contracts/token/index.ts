@@ -5,3 +5,4 @@ import type * as privateErc20 from "./PrivateERC20";
 export type { privateErc20 };
 import type * as privateErc721 from "./PrivateERC721";
 export type { privateErc721 };
+export type { PERCI } from "./PERCI";

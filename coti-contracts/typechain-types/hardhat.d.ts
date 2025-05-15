@@ -14,6 +14,10 @@ import * as Contracts from ".";
 declare module "hardhat/types/runtime" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
     getContractFactory(
+      name: "Ownable",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.Ownable__factory>;
+    getContractFactory(
       name: "IERC4906",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC4906__factory>;
@@ -170,6 +174,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.AccountOnboard__factory>;
     getContractFactory(
+      name: "PERCI",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.PERCI__factory>;
+    getContractFactory(
       name: "IPrivateERC20",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IPrivateERC20__factory>;
@@ -203,6 +211,11 @@ declare module "hardhat/types/runtime" {
     ): Promise<Contracts.ExtendedOperations__factory>;
 
     getContractAt(
+      name: "Ownable",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.Ownable>;
+    getContractAt(
       name: "IERC4906",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -397,6 +410,11 @@ declare module "hardhat/types/runtime" {
       address: string | ethers.Addressable,
       signer?: ethers.Signer
     ): Promise<Contracts.AccountOnboard>;
+    getContractAt(
+      name: "PERCI",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.PERCI>;
     getContractAt(
       name: "IPrivateERC20",
       address: string | ethers.Addressable,
@@ -439,6 +457,10 @@ declare module "hardhat/types/runtime" {
     ): Promise<Contracts.ExtendedOperations>;
 
     deployContract(
+      name: "Ownable",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.Ownable>;
+    deployContract(
       name: "IERC4906",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC4906>;
@@ -594,6 +616,10 @@ declare module "hardhat/types/runtime" {
       name: "AccountOnboard",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.AccountOnboard>;
+    deployContract(
+      name: "PERCI",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.PERCI>;
     deployContract(
       name: "IPrivateERC20",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -628,6 +654,11 @@ declare module "hardhat/types/runtime" {
     ): Promise<Contracts.ExtendedOperations>;
 
     deployContract(
+      name: "Ownable",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.Ownable>;
+    deployContract(
       name: "IERC4906",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -822,6 +853,11 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.AccountOnboard>;
+    deployContract(
+      name: "PERCI",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.PERCI>;
     deployContract(
       name: "IPrivateERC20",
       args: any[],
