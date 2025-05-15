@@ -1,4 +1,6 @@
 **Understanding `PrivateERC20`**
+https://docs.coti.io/coti-documentation/build-on-coti/tools/contracts-library/tokens/private-erc20
+
 
 The `PrivateERC20` contract is an *abstract contract* designed to be a base for creating ERC20-like tokens where balances and transaction amounts are kept private using Multi-Party Computation (MPC) or similar cryptographic techniques. Here are its key characteristics:
 
@@ -87,7 +89,7 @@ contract PERCI is PrivateERC20, Ownable {
         // _mint already checks if account is address(0)
         // _mint returns a gtBool, which we can choose to return or convert
         /* gtBool success = */ _mint(account, gtValue); 
-      
+    
         // For simplicity, we'll assume the operation succeeds if no revert.
         // The actual success/failure might be encoded in the gtBool result from _mint,
         // which would require MPC interaction to decrypt/verify if needed by the caller.
