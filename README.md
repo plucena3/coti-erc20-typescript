@@ -1,11 +1,10 @@
 onboard requirements node 22 or better installed
-having a Testnet COTI account onboarded
+having a Testnet COTI account onboarded* (hardhat will create a new account to be funded @ faucet.coti.io)
 
 ```
 npm install
 cd coti-hardhat-template
 npm install
-cd ../coti-contracts/contracts/onboard
 ```
 
 ## create PRIVATE ERC-20 smart contract
