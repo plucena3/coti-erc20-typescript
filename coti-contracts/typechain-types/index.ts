@@ -86,6 +86,8 @@ export type { PrivateERC20WalletMock } from "./contracts/mocks/wallet/PrivateERC
 export { PrivateERC20WalletMock__factory } from "./factories/contracts/mocks/wallet/PrivateERC20Wallet/PrivateERC20WalletMock__factory";
 export type { AccountOnboard } from "./contracts/onboard/AccountOnboard";
 export { AccountOnboard__factory } from "./factories/contracts/onboard/AccountOnboard__factory";
+export type { CAPIBARA } from "./contracts/token/CAPIBARA";
+export { CAPIBARA__factory } from "./factories/contracts/token/CAPIBARA__factory";
 export type { PERCI } from "./contracts/token/PERCI";
 export { PERCI__factory } from "./factories/contracts/token/PERCI__factory";
 export type { IPrivateERC20 } from "./contracts/token/PrivateERC20/IPrivateERC20";

@@ -174,6 +174,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.AccountOnboard__factory>;
     getContractFactory(
+      name: "CAPIBARA",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.CAPIBARA__factory>;
+    getContractFactory(
       name: "PERCI",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.PERCI__factory>;
@@ -411,6 +415,11 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.AccountOnboard>;
     getContractAt(
+      name: "CAPIBARA",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.CAPIBARA>;
+    getContractAt(
       name: "PERCI",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -617,6 +626,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.AccountOnboard>;
     deployContract(
+      name: "CAPIBARA",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.CAPIBARA>;
+    deployContract(
       name: "PERCI",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.PERCI>;
@@ -853,6 +866,11 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.AccountOnboard>;
+    deployContract(
+      name: "CAPIBARA",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.CAPIBARA>;
     deployContract(
       name: "PERCI",
       args: any[],
