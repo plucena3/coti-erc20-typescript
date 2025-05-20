@@ -74,3 +74,29 @@ besides connecting to smart contract and invking the balanceOf, inherited from P
     if (typeof (cotiWallet as any).decryptValue === 'function') {
 
 ```
+
+```
+npx hardhat run scripts/getBalanceCapibara.ts --network coti-testnet
+```
+
+> COTI Wallet address for decryption: 0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8
+> Checking CAPIBARA token balance for account: 0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8
+> Fetching ctUint64 balance for 0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8 from CAPIBARA contract 0xa7ca50518d4D535bBF239CcbeCCf1CF645bdB692...
+> Returned ctBalance (uint256 representing ctUint64) from balanceOf(address): 56416761393520520570629241106468123319608152122616496427845583061411242725370
+> Attempting decryption with cotiWallet.decryptValue()...
+> Value from cotiWallet.decryptValue(): 100000000000
+> Token decimals from contract: 6
+> Formatted decrypted CAPIBARA balance: 100000.0 CAPI
+
+## mint
+
+given **@CAPIBARA.sol**  deployed at 0xa7ca50518d4D535bBF239CcbeCCf1CF645bdB692 write a hardhat script to call mint function similar to **@mint.ts**
+
+> Attempting to call mint on CAPIBARA contract at 0xa7ca50518d4D535bBF239CcbeCCf1CF645bdB692
+> Minting tokens to: 0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8
+> Value (smallest units): 5000000000
+> Value (whole tokens): 5000
+> Using deployer account (owner and recipient for minting): 0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8
+> Transaction sent: 0x7b91a7bd3f805a100951e4a89d0b9de988c280d3512ac6e94e9d8001ea8ab7e5
+> Transaction confirmed: 0x7b91a7bd3f805a100951e4a89d0b9de988c280d3512ac6e94e9d8001ea8ab7e5
+> mint called successfully! 5000 CAPI tokens (value: 5000000000) minted to 0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8.
