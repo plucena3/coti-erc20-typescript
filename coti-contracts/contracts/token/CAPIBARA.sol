@@ -2,7 +2,7 @@
 pragma solidity ^0.8.19;
 
 import "./PrivateERC20/PrivateERC20.sol";
-import "../utils/mpc/MpcCore.sol"
+import "@coti-io/coti-contracts/contracts/utils/mpc/MpcCore.sol";
 
 contract CAPIBARA is PrivateERC20 {
     address public owner;
