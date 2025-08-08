@@ -82,9 +82,15 @@ Compiled 1 Solidity file successfully (evm target: paris).
 
 > ⚠️ **Note**: The warnings about function state mutability are expected and can be safely ignored.
 
+
 ## Step 3: Create Deployment Script with Cursor.AI
 
 ### Using Cursor.AI to Generate the Deployment Script
+
+```bash
+cd scripts
+```
+
 
 **Execute this prompt in Cursor.AI:**
 
