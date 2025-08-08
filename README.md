@@ -88,7 +88,7 @@ Compiled 1 Solidity file successfully (evm target: paris).
 ### Using Cursor.AI to Generate the Deployment Script
 
 ```bash
-cd scripts
+use coti-contracts/scripts
 ```
 
 
@@ -110,6 +110,7 @@ The script should:
 After Cursor.AI generates the deployment script, run it:
 
 ```bash
+cd coti-contracts
 npx hardhat run scripts/deploy-capibara.ts --network coti-testnet
 ```
 
