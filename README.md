@@ -6,24 +6,25 @@ This guide demonstrates how to create, deploy, and interact with private ERC-20 
 
 - **Node.js**: Version 22 or better installed available [here](https://nodejs.org/en/download)
 - **COTI Account Onboarding**: Complete the account onboarding procedure to obtain your AES encryption key
-> 📖 **For detailed instructions**, see the [official COTI onboarding guide](https://docs.coti.io/coti-documentation/build-on-coti/guides/account-onboard)
-- **Cursor.AI**: For AI-assisted smart contract development available [here](https://cursor.com/downloads)
 
+> 📖 **For detailed instructions**, see the [official COTI onboarding guide](https://docs.coti.io/coti-documentation/build-on-coti/guides/account-onboard)
+
+- **Cursor.AI**: For AI-assisted smart contract development available [here](https://cursor.com/downloads)
 
 > 🔐 **Important**: Save your AES key securely - you'll need it for all confidential operations throughout this tutorial.
 
 ## Initial Project Setup
 
-Install dependencies in the root directory and setup the Hardhat environment:
+Install dependencies in the project root directory and setup the Hardhat environment:
 
 ```bash
+git clone https://github.com/plucena/coti-erc20
 npm install
 cd coti-hardhat-template
 npm install
 ```
 
 ## Step 1: Create PRIVATE ERC-20 Smart Contract with Cursor.AI
-
 
 Using Cursor.AI to Generate the Contract
 
