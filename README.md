@@ -7,7 +7,7 @@ This guide demonstrates how to create, deploy, and interact with private ERC-20 
 - **Node.js**: Version 22 or better installed available at https://nodejs.org/en/download
 - **COTI Account Onboarding**: Complete the account onboarding procedure to obtain your AES encryption key
 > 📖 **For detailed instructions**, see the [official COTI onboarding guide](https://docs.coti.io/coti-documentation/build-on-coti/guides/account-onboard)
-- **Cursor.AI**: For AI-assisted smart contract development available at 
+- **Cursor.AI**: For AI-assisted smart contract development available at [here](https://cursor.com/downloads)
 
 
 > 🔐 **Important**: Save your AES key securely - you'll need it for all confidential operations throughout this tutorial.
