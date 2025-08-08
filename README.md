@@ -4,43 +4,11 @@ This guide demonstrates how to create, deploy, and interact with private ERC-20 
 
 ## Prerequisites
 
-- **Node.js**: Version 22 or better installed
+- **Node.js**: Version 22 or better installed available at https://nodejs.org/en/download
 - **COTI Account Onboarding**: Complete the account onboarding procedure to obtain your AES encryption key
-- **COTI Testnet Account**: Must be onboarded (Hardhat will create a new account to be funded at [faucet.coti.io](https://faucet.coti.io))
-- **Cursor.AI**: For AI-assisted smart contract development
-
-### Account Onboarding Procedure
-
-Before you can interact with COTI's confidential smart contracts, you must complete the account onboarding process to acquire your EOA (Externally Owned Account) unique AES key. This key is essential for encryption and decryption operations in COTI's confidential computing environment.
-
-#### Step 1: Install COTI Ethers
-
-```bash
-npm install @coti-io/coti-ethers
-```
-
-#### Step 2: Generate Your AES Key
-
-Create a script to onboard your account and generate the AES key:
-
-```typescript
-import { CotiNetwork, getDefaultProvider, Wallet } from "@coti-io/coti-ethers"
-
-const PRIVATE_KEY = "<YOUR_EOA_PRIVATE_KEY>"
-
-const provider = getDefaultProvider(CotiNetwork.Testnet)
-const wallet = new Wallet(PRIVATE_KEY, provider)
-
-await wallet.generateOrRecoverAes()
-
-console.log("Your AES Key:", wallet.getUserOnboardInfo()?.aesKey)
-```
-
-#### Step 3: Fund Your Account
-
-After onboarding, fund your account using the [COTI Faucet](https://faucet.coti.io).
-
 > 📖 **For detailed instructions**, see the [official COTI onboarding guide](https://docs.coti.io/coti-documentation/build-on-coti/guides/account-onboard)
+- **Cursor.AI**: For AI-assisted smart contract development available at 
+
 
 > 🔐 **Important**: Save your AES key securely - you'll need it for all confidential operations throughout this tutorial.
 
