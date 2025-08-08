@@ -35,8 +35,8 @@ Using Cursor.AI to Generate the Contract
 ```
 @coti-contracts @PrivateERC20 @PrivateERC20.md @IPrivateERC20.md @PERCI.sol
 
-Create a new contract called CAPIBARA.sol that inherits from @PrivateERC20 and has 100000 tokens minted to 0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8 
-
+Create a new contract called CAPIBARA.sol that inherits from @PrivateERC20 and has 100000 tokens
+minted to 0xFFFFFFFFFFFFFFFFFFFFFF
 CAPIBARA.sol must include:
 - totalSupply implementation
 - mint function implementation  
@@ -46,7 +46,7 @@ CAPIBARA.sol must include:
 
 ### Important Notes:
 
-- **Replace the address** `0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8` with **YOUR OWN WALLET ADDRESS**
+- **Replace the address** `0xFFFFFFFFFFFFFFFFFFFFFF` with **YOUR OWN WALLET ADDRESS**
 - The `@` symbol in Cursor.AI references specific files in your workspace for context
 - Cursor.AI will analyze the referenced contracts to understand the PrivateERC20 implementation pattern
 
