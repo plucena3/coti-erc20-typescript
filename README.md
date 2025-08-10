@@ -174,6 +174,7 @@ The script should include these configuration placeholders:
 
 ### Required Configuration
 
+> 🔐 **Important**:
 Before running the script, you must configure your private keys in the generated script:
 
 ```typescript
