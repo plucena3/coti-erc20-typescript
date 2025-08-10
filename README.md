@@ -153,7 +153,7 @@ CAPIBARA Token deployed to: 0xa7ca50518d4D535bBF239CcbeCCf1CF645bdB692
 
 ### Using Cursor.AI to Generate the Balance Script
 
-**Execute this prompt in Cursor.AI:**
+**Prepare this prompt in Cursor.AI:**
 
 ```
 @coti-ethers @coti-contracts/scripts/getBalance.ts @coti-contracts/contracts/token/CAPIBARA.sol
@@ -161,20 +161,26 @@ CAPIBARA Token deployed to: 0xa7ca50518d4D535bBF239CcbeCCf1CF645bdB692
 Using @coti-ethers, write a hardhat script similar to @getBalance.ts that:
 
 1. Invokes the balanceOf(address account) function of @CAPIBARA.sol
-2. Displays the balance of the contract deployed at coti-testnet at YOUR_CONTRACT_ADDRESS
+2. Displays the balance of the contract deployed at coti-testnet at  **YOUR_CONTRACT_ADDRESS**
 3. Includes proper private key and AES configuration
 4. Uses coti-ethers for confidential value decryption
 5. Handles the ctUint64 balance type correctly
 
-The script should include these configuration placeholders:
-- ACCOUNT_PRIVATE_KEY for transaction signing
-- AES_KEY for encryption/decryption
-- Contract address from deployment
+
 ```
 
 ### Required Configuration
 
 > 🔐 **Important**:
+> Replace  **YOUR_CONTRACT_ADDRESS**  with the contract address from previous deployment before running this prompt
+
+
+The script should include these configuration placeholders:
+- ACCOUNT_PRIVATE_KEY for transaction signing
+- AES_KEY for encryption/decryption
+
+
+
 Before running the script, you must configure your private keys in the generated script:
 
 ```typescript
