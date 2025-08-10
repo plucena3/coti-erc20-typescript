@@ -87,10 +87,6 @@ Compiled 1 Solidity file successfully (evm target: paris).
 
 ### Using Cursor.AI to Generate the Deployment Script
 
-```bash
-use coti-contracts/scripts
-```
-
 
 **Execute this prompt in Cursor.AI:**
 
@@ -103,6 +99,7 @@ The script should:
 - Follow the same pattern as the referenced deploy.ts
 - Deploy the CAPIBARA contract to COTI testnet
 - Output the deployed contract address
+- Save the scripts on the coti-contracts/scripts folder
 ```
 
 ### Deploy the Contract
