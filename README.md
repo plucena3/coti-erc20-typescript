@@ -123,7 +123,7 @@ The script should:
 
 ### Deploy the Contract
 
-1. After Cursor.AI generates the deployment script, go to the root directory of your project.
+1. After Cursor.AI generates the deployment script, go to the coti-contracts directory of your project.
 
 2. Create a new file named .env.
 
@@ -131,6 +131,8 @@ The script should:
 
 ```.env
 SIGNING_KEYS=YOUR_USER_PK
+PRIVATE_KEY=YOUR_USER_PK
+
 ```
 
 Then run the script
