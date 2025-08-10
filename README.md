@@ -166,6 +166,9 @@ Using @coti-ethers, write a hardhat script similar to @getBalance.ts that:
 4. Uses coti-ethers for confidential value decryption
 5. Handles the ctUint64 balance type correctly
 
+<<<<<<< HEAD
+```
+=======
 
 ```
 
@@ -178,18 +181,7 @@ Using @coti-ethers, write a hardhat script similar to @getBalance.ts that:
 The script should include these configuration placeholders:
 - ACCOUNT_PRIVATE_KEY for transaction signing
 - AES_KEY for encryption/decryption
-
-
-
-Before running the script, you must configure your private keys in the generated script:
-
-```typescript
-const ACCOUNT_PRIVATE_KEY = 'YOUR_PRIVATE_KEY_HERE'; 
-// Ensure this private key is correct for decryption to work.
-
-// --- IMPORTANT: Replace with your AES encryption/decryption key ---
-const AES_KEY = 'YOUR_AES_KEY_HERE';
-```
+>>>>>>> 34d689146fbc57f2dd324dd3be380e3532b8cc56
 
 ### Key Features Explained
 
