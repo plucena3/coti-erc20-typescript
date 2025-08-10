@@ -123,7 +123,11 @@ The script should:
 
 ### Deploy the Contract
 
-After Cursor.AI generates the deployment script,  creat a .env file with the contents of the private key of the ONBOARDED user defined on the Prerequisite files
+1. After Cursor.AI generates the deployment script, go to the root directory of your project.
+
+2. Create a new file named .env.
+
+3. Open the .env file and add the private key from the user you set up in the "Prerequisites" section. Format it like this:
 
 ```.env
 SIGNING_KEYS=YOUR_USER_PK
