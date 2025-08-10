@@ -11,7 +11,7 @@ This guide demonstrates how to create, deploy, and interact with private ERC-20 
 
 - **Cursor.AI**: For AI-assisted smart contract development available [here](https://cursor.com/downloads)
 
-> 🔐 **Important**: Save your AES key securely - you'll need it for all confidential operations throughout this tutorial.
+> 🔐 **Important**: Save your Private Key and AES key securely - you'll need it for all confidential operations throughout this tutorial.
 
 ## Initial Project Setup
 
