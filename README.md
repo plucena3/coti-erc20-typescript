@@ -34,7 +34,7 @@ Using Cursor.AI to Generate the Contract
 4. **Execute this prompt in Cursor.AI:**
 
 ```
-@coti-contracts @PrivateERC20 @PrivateERC20.md @IPrivateERC20.md @PERCI.sol
+@coti-contracts @coti-contracts/contracts/token/PrivateERC20 @coti-contracts/contracts/token/PrivateERC20.md @coti-contracts/contracts/token/IPrivateERC20.md @coti-contracts/contracts/token/PERCI.sol
 
 Create a new contract called CAPIBARA.sol that inherits from @PrivateERC20 and has 100000 tokens
 minted to 0xFFFFFFFFFFFFFFFFFFFFFF
@@ -116,7 +116,7 @@ The script should:
 ```
 @deploy.ts
 
-Create a script similar to @deploy.ts to deploy @CAPIBARA.sol
+Create a script similar to @coti-contracts/scripts/deploy.ts to deploy @coti-contracts/contracts/token/CAPIBARA.sol
 
 The script should:
 - Follow the same pattern as the referenced deploy.ts
@@ -156,7 +156,7 @@ CAPIBARA Token deployed to: 0xa7ca50518d4D535bBF239CcbeCCf1CF645bdB692
 **Execute this prompt in Cursor.AI:**
 
 ```
-@coti-ethers @getBalance.ts @CAPIBARA.sol
+@coti-ethers @coti-contracts/scripts/getBalance.ts @coti-contracts/contracts/token/CAPIBARA.sol
 
 Using @coti-ethers, write a hardhat script similar to @getBalance.ts that:
 
