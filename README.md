@@ -137,7 +137,7 @@ Then run the script
 ```bash
 npx hardhat run scripts/deploy-capibara.ts --network coti-testnet
 ```
-```
+
 
 **Expected output:**
 
