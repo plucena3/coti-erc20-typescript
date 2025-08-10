@@ -107,11 +107,36 @@ The script should:
 
 ### Deploy the Contract
 
-After Cursor.AI generates the deployment script, run it:
+## Step 3: Create Deployment Script with Cursor.AI
+
+### Using Cursor.AI to Generate the Deployment Script
+
+**Execute this prompt in Cursor.AI:**
+
+```
+@deploy.ts
+
+Create a script similar to @deploy.ts to deploy @CAPIBARA.sol
+
+The script should:
+- Follow the same pattern as the referenced deploy.ts
+- Deploy the CAPIBARA contract to COTI testnet
+- Output the deployed contract address
+```
+
+### Deploy the Contract
+
+After Cursor.AI generates the deployment script,  creat a .env file with the contents of the private key of the ONBOARDED user defined on the Prerequisite files
+
+```.env
+SIGNING_KEYS=YOUR_USER_PK
+```
+
+Then run the script
 
 ```bash
-cd coti-contracts
 npx hardhat run scripts/deploy-capibara.ts --network coti-testnet
+```
 ```
 
 **Expected output:**
