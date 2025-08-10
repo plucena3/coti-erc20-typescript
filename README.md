@@ -166,22 +166,7 @@ Using @coti-ethers, write a hardhat script similar to @getBalance.ts that:
 4. Uses coti-ethers for confidential value decryption
 5. Handles the ctUint64 balance type correctly
 
-<<<<<<< HEAD
 ```
-=======
-
-```
-
-### Required Configuration
-
-> 🔐 **Important**:
-> Replace  **YOUR_CONTRACT_ADDRESS**  with the contract address from previous deployment before running this prompt
-
-
-The script should include these configuration placeholders:
-- ACCOUNT_PRIVATE_KEY for transaction signing
-- AES_KEY for encryption/decryption
->>>>>>> 34d689146fbc57f2dd324dd3be380e3532b8cc56
 
 ### Key Features Explained
 
