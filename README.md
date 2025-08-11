@@ -152,59 +152,13 @@ CAPIBARA Token deployed to: 0xa7ca50518d4D535bBF239CcbeCCf1CF645bdB692
 
 > 🔍 **MetaMask Integration**: Encrypted values will be visible in MetaMask, showing the confidential nature of the token balances.
 
-## Step 4: Create Balance Checking Script with Cursor.AI
+## Step 4: Check the balance using the Metamask COTI Snap
 
-### Using Cursor.AI to Generate the Balance Script
+You can check that the token was correctly minting by acessing the Metamask COTI Snap.  
+On the tokens tab click import and enter the address of the deployed contract
 
-**Prepare this prompt in Cursor.AI:**
+![A snapshot of the coti application](coti-snap.png)
 
-```
-@coti-ethers @coti-contracts/scripts/getBalance.ts @coti-contracts/contracts/token/CAPIBARA.sol
-
-Using @coti-ethers, write a hardhat script similar to @getBalance.ts that:
-
-1. Invokes the balanceOf(address account) function of @CAPIBARA.sol
-2. Displays the balance of the contract deployed at coti-testnet at  **YOUR_CONTRACT_ADDRESS**
-3. Includes proper private key and AES configuration
-4. Uses coti-ethers for confidential value decryption
-5. Handles the ctUint64 balance type correctly
-
-```
-
-### Key Features Explained
-
-The generated script will demonstrate:
-
-- **COTI-Ethers Integration**: Connecting to smart contract using coti-ethers library
-- **Confidential Balance Retrieval**: Invoking `balanceOf` inherited from `PrivateERC20`
-- **Decryption Capability**: Using COTI's decryption functionality
-
-```typescript
-if (typeof (cotiWallet as any).decryptValue === 'function') {
-    // This checks if the wallet supports COTI's confidential value decryption
-}
-```
-
-### Run the Balance Check
-
-```bash
-npx hardhat run scripts/getBalanceCapibara.ts --network coti-testnet
-```
-
-**Expected output:**
-
-```
-COTI Wallet address for decryption: 0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8
-Checking CAPIBARA token balance for account: 0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8
-Fetching ctUint64 balance for 0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8 from CAPIBARA contract 0xa7ca50518d4D535bBF239CcbeCCf1CF645bdB692...
-Returned ctBalance (uint256 representing ctUint64) from balanceOf(address): 56416761393520520570629241106468123319608152122616496427845583061411242725370
-Attempting decryption with cotiWallet.decryptValue()...
-Value from cotiWallet.decryptValue(): 100000000000
-Token decimals from contract: 6
-Formatted decrypted CAPIBARA balance: 100000.0 CAPI
-```
-
-> 🔐 **Confidential Computing**: Notice how the encrypted balance appears as a large number, but decrypts to the actual readable balance.
 
 ## Step 5: Create Token Minting Script with Cursor.AI
 
