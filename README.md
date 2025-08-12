@@ -13,7 +13,7 @@ For AI-assisted smart contract development available
 - **GitHub Copilot** - [here] (https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
 
-- **COTI Account Onboarding**: Complete the account onboarding procedure to obtain your AES encryption key
+**COTI Account Onboarding**: Complete the account onboarding procedure to obtain your AES encryption key
 > 📖 **For detailed instructions**, see the [official COTI onboarding guide](https://docs.coti.io/coti-documentation/build-on-coti/guides/account-onboard)
 
 
