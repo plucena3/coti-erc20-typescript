@@ -1,15 +1,21 @@
 # COTI Private ERC-20 Token Development Guide
 
-This guide demonstrates how to create, deploy, and interact with private ERC-20 tokens on the COTI network using confidential computing and AI-assisted development with Cursor.AI.
+This guide demonstrates how to create, deploy, and interact with private ERC-20 tokens on the COTI network using confidential computing and AI-assisted development with VSCode + Copilot.
 
 ## Prerequisites
 
 - **Node.js**: Version 22 or better installed available [here](https://nodejs.org/en/download)
-- **COTI Account Onboarding**: Complete the account onboarding procedure to obtain your AES encryption key
+- **Solc compiler** - [here] (https://docs.soliditylang.org/en/latest/installing-solidity.html)
+- **Hardhat** - [here] (https://hardhat.org/hardhat-runner/docs/getting-started#overview)
 
+For AI-assisted smart contract development available
+- **VS Code**:  [here]((https://code.visualstudio.com/download))
+- **GitHub Copilot** - [here] (https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
+
+
+- **COTI Account Onboarding**: Complete the account onboarding procedure to obtain your AES encryption key
 > 📖 **For detailed instructions**, see the [official COTI onboarding guide](https://docs.coti.io/coti-documentation/build-on-coti/guides/account-onboard)
 
-- **Cursor.AI**: For AI-assisted smart contract development available [here](https://cursor.com/downloads)
 
 > 🔐 **Important**: Save your Private Key and AES key securely - you'll need it for all confidential operations throughout this tutorial.
 
@@ -24,14 +30,14 @@ cd coti-hardhat-template
 npm install
 ```
 
-## Step 1: Create PRIVATE ERC-20 Smart Contract with Cursor.AI
+## Step 1: Create PRIVATE ERC-20 Smart Contract with Github Copilot
 
-Using Cursor.AI to Generate the Contract
+Using Copilot to Generate the Contract
 
-1. **Open Cursor.AI** in your development environment
+1. **Open VSCode** in your development environment
 2. **Navigate** to coti-contracts/contracts/token folder
 3. **Reference the required files** by mentioning them in your prompt with the `@` symbol
-4. **Execute this prompt in Cursor.AI:**
+4. **Execute this prompt in GitHub Copilot:**
 
 ```
 @coti-contracts @coti-contracts/contracts/token/PrivateERC20 @coti-contracts/contracts/token/PrivateERC20.md @coti-contracts/contracts/token/IPrivateERC20.md @coti-contracts/contracts/token/PERCI.sol
@@ -48,8 +54,8 @@ CAPIBARA.sol must include:
 ### Important Notes:
 
 - **Replace the address** `0xFFFFFFFFFFFFFFFFFFFFFF` with **YOUR OWN WALLET ADDRESS**
-- The `@` symbol in Cursor.AI references specific files in your workspace for context
-- Cursor.AI will analyze the referenced contracts to understand the PrivateERC20 implementation pattern
+- The `@` symbol in GitHub Copilot references specific files in your workspace for context
+- Copilot will analyze the referenced contracts to understand the PrivateERC20 implementation pattern
 
 ## Step 2: Compile Smart Contract
 
@@ -83,12 +89,12 @@ Compiled 1 Solidity file successfully (evm target: paris).
 > ⚠️ **Note**: The warnings about function state mutability are expected and can be safely ignored.
 
 
-## Step 3: Create Deployment Script with Cursor.AI
+## Step 3: Create Deployment Script with Copilot
 
-### Using Cursor.AI to Generate the Deployment Script
+### Using Copilotto Generate the Deployment Script
 
 
-**Execute this prompt in Cursor.AI:**
+**Execute this prompt in Copilot:**
 
 ```
 @deploy.ts
@@ -104,11 +110,11 @@ The script should:
 
 ### Deploy the Contract
 
-## Step 3: Create Deployment Script with Cursor.AI
+## Step 3: Create Deployment Script with Copilot
 
-### Using Cursor.AI to Generate the Deployment Script
+### Using Copilot to Generate the Deployment Script
 
-**Execute this prompt in Cursor.AI:**
+**Execute this prompt in Copilot :**
 
 ```
 @deploy.ts
@@ -123,7 +129,7 @@ The script should:
 
 ### Deploy the Contract
 
-1. After Cursor.AI generates the deployment script, go to the coti-contracts directory of your project.
+1. After Copilot  generates the deployment script, go to the coti-contracts directory of your project.
 
 2. Create a new file named .env.
 
@@ -160,11 +166,11 @@ On the tokens tab click import and enter the address of the deployed contract
 ![A snapshot of the coti application](coti-snap.png)
 
 
-## Step 5: Create Token Minting Script with Cursor.AI
+## Step 5: Create Token Minting Script with Copilot
 
-### Using Cursor.AI to Generate the Minting Script
+### Using Copilot to Generate the Minting Script
 
-**Execute this prompt in Cursor.AI:**
+**Execute this prompt in Copilot:**
 
 ```
 @mint.ts @CAPIBARA.sol
@@ -209,7 +215,7 @@ This tutorial demonstrates COTI's unique privacy-preserving blockchain capabilit
 3. **⚙️ ERC-20 Compatibility**: Despite privacy features, maintains full ERC-20 standard compatibility
 4. **🦊 MetaMask Integration**: Encrypted values are visible in MetaMask, providing transparency about encrypted data existence
 
-## Cursor.AI Best Practices for COTI Development
+## Github Copilot Best Practices for COTI Development
 
 ### Effective Prompting Tips:
 
