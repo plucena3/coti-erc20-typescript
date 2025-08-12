@@ -8,6 +8,7 @@ This guide demonstrates how to create, deploy, and interact with private ERC-20 
 - **Solc compiler** - [here] (https://docs.soliditylang.org/en/latest/installing-solidity.html)
 - **Hardhat** - [here] (https://hardhat.org/hardhat-runner/docs/getting-started#overview)
 
+
 For AI-assisted smart contract development available
 - **VS Code**:  [here](https://code.visualstudio.com/download)
 - **GitHub Copilot** - [here] (https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
@@ -15,9 +16,9 @@ For AI-assisted smart contract development available
 
 **COTI Account Onboarding**: Complete the account onboarding procedure to obtain your AES encryption key
 > 📖 **For detailed instructions**, see the [official COTI onboarding guide](https://docs.coti.io/coti-documentation/build-on-coti/guides/account-onboard)
-
-
 > 🔐 **Important**: Save your Private Key and AES key securely - you'll need it for all confidential operations throughout this tutorial.
+
+
 
 ## Initial Project Setup
 
