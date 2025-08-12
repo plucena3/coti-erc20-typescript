@@ -15,7 +15,9 @@ For AI-assisted smart contract development available
 
 
 **COTI Account Onboarding**: Complete the account onboarding procedure to obtain your AES encryption key
+
 > 📖 **For detailed instructions**, see the [official COTI onboarding guide](https://docs.coti.io/coti-documentation/build-on-coti/guides/account-onboard)
+
 > 🔐 **Important**: Save your Private Key and AES key securely - you'll need it for all confidential operations throughout this tutorial.
 
 
