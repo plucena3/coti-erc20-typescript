@@ -9,7 +9,7 @@ This guide demonstrates how to create, deploy, and interact with private ERC-20 
 - **Hardhat** - [here] (https://hardhat.org/hardhat-runner/docs/getting-started#overview)
 
 For AI-assisted smart contract development available
-- **VS Code**:  [here]((https://code.visualstudio.com/download))
+- **VS Code**:  [here](https://code.visualstudio.com/download)
 - **GitHub Copilot** - [here] (https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
 
