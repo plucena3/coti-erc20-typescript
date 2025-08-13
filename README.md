@@ -7,6 +7,7 @@ This guide demonstrates how to create, deploy, and interact with private ERC-20 
 - **Node.js**: Version 22 or better installed available [here](https://nodejs.org/en/download)
 - **Solc compiler** - [here](https://docs.soliditylang.org/en/latest/installing-solidity.html)
 - **Hardhat** - [here](https://hardhat.org/hardhat-runner/docs/getting-started#overview)
+- **COTI Metamask Snap ** - [beta here](https://github.com/YaruLabs/coti-snap-fork) 
 
 
 For AI-assisted smart contract development available
@@ -45,7 +46,7 @@ Using Copilot to Generate the Contract
 4. **Execute this prompt in GitHub Copilot:**
 
 ```
-GITHUB COPILOT
+🤖 GITHUB COPILOT
 
 @coti-contracts @coti-contracts/contracts/token/PrivateERC20 @coti-contracts/contracts/token/PrivateERC20.md @coti-contracts/contracts/token/IPrivateERC20.md @coti-contracts/contracts/token/PERCI.sol
 
@@ -106,7 +107,7 @@ Compiled 1 Solidity file successfully (evm target: paris).
 **Execute this prompt in Copilot:**
 
 ```
-GITHUB COPILOT
+🤖 GITHUB COPILOT
 
 @deploy.ts
 
@@ -128,7 +129,7 @@ The script should:
 **Execute this prompt in Copilot :**
 
 ```
-GITHUB COPILOT
+🤖 GITHUB COPILOT
 
 @deploy.ts
 
@@ -188,7 +189,7 @@ On the tokens tab click import and enter the address of the deployed contract
 **Execute this prompt in Copilot:**
 
 ```
-GITHUB COPILOT
+🤖 GITHUB COPILOT
 
 @mint.ts @CAPIBARA.sol
 
