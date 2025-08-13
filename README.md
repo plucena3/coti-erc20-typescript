@@ -27,6 +27,8 @@ For AI-assisted smart contract development available
 Install dependencies in the project root directory and setup the Hardhat environment:
 
 ```bash
+TERMINAL
+
 git clone https://github.com/plucena/coti-erc20
 npm install
 cd coti-hardhat-template
@@ -43,6 +45,8 @@ Using Copilot to Generate the Contract
 4. **Execute this prompt in GitHub Copilot:**
 
 ```
+GITHUB COPILOT
+
 @coti-contracts @coti-contracts/contracts/token/PrivateERC20 @coti-contracts/contracts/token/PrivateERC20.md @coti-contracts/contracts/token/IPrivateERC20.md @coti-contracts/contracts/token/PERCI.sol
 
 Create a new contract called CAPIBARA.sol that inherits from @PrivateERC20 and has 100000 tokens
@@ -65,6 +69,8 @@ CAPIBARA.sol must include:
 Navigate to the contracts directory and compile your generated contract:
 
 ```bash
+TERMINAL
+
 cd coti-contracts
 npx hardhat compile
 ```
@@ -100,6 +106,8 @@ Compiled 1 Solidity file successfully (evm target: paris).
 **Execute this prompt in Copilot:**
 
 ```
+GITHUB COPILOT
+
 @deploy.ts
 
 Create a script similar to @deploy.ts to deploy @CAPIBARA.sol
@@ -120,6 +128,8 @@ The script should:
 **Execute this prompt in Copilot :**
 
 ```
+GITHUB COPILOT
+
 @deploy.ts
 
 Create a script similar to @coti-contracts/scripts/deploy.ts to deploy @coti-contracts/contracts/token/CAPIBARA.sol
@@ -147,6 +157,8 @@ PRIVATE_KEY=YOUR_USER_PK
 Then run the script
 
 ```bash
+TERMINAL
+
 npx hardhat run scripts/deploy-capibara.ts --network coti-testnet
 ```
 
@@ -176,6 +188,8 @@ On the tokens tab click import and enter the address of the deployed contract
 **Execute this prompt in Copilot:**
 
 ```
+GITHUB COPILOT
+
 @mint.ts @CAPIBARA.sol
 
 Given @CAPIBARA.sol deployed at YOUR_CONTRACT_ADDRESS, write a hardhat script to call the mint function similar to @mint.ts
