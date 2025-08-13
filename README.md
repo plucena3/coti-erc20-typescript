@@ -7,7 +7,7 @@ This guide demonstrates how to create, deploy, and interact with private ERC-20 
 - **Node.js**: Version 22 or better installed available [here](https://nodejs.org/en/download)
 - **Solc compiler** - [here](https://docs.soliditylang.org/en/latest/installing-solidity.html)
 - **Hardhat** - [here](https://hardhat.org/hardhat-runner/docs/getting-started#overview)
-- **COTI Metamask Snap ** - [beta here](https://github.com/YaruLabs/coti-snap-fork) 
+- **COTI Metamask Snap** - [beta here](https://github.com/YaruLabs/coti-snap-fork) 
 
 
 For AI-assisted smart contract development available
