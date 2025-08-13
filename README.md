@@ -28,7 +28,7 @@ For AI-assisted smart contract development available
 Install dependencies in the project root directory and setup the Hardhat environment:
 
 ```bash
-TERMINAL
+ 🖥️ TERMINAL
 
 git clone https://github.com/plucena/coti-erc20
 npm install
@@ -70,7 +70,7 @@ CAPIBARA.sol must include:
 Navigate to the contracts directory and compile your generated contract:
 
 ```bash
-TERMINAL
+ 🖥️ TERMINAL
 
 cd coti-contracts
 npx hardhat compile
@@ -158,7 +158,7 @@ PRIVATE_KEY=YOUR_USER_PK
 Then run the script
 
 ```bash
-TERMINAL
+ 🖥️ TERMINAL
 
 npx hardhat run scripts/deploy-capibara.ts --network coti-testnet
 ```
@@ -206,6 +206,8 @@ The script should:
 ### Run the Minting Script
 
 ```bash
+ 🖥️ TERMINAL
+
 npx hardhat run scripts/mintCapibara.ts --network coti-testnet
 ```
 
