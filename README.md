@@ -101,7 +101,7 @@ Compiled 1 Solidity file successfully (evm target: paris).
 
 ## Step 3: Create Deployment Script with Copilot
 
-### Using Copilotto Generate the Deployment Script
+### Using Copilot to Generate the Deployment Script
 
 
 **Execute this prompt in Copilot:**
