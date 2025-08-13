@@ -10,7 +10,7 @@ This guide demonstrates how to create, deploy, and interact with private ERC-20 
 - **COTI Metamask Snap** - [beta here](https://github.com/YaruLabs/coti-snap-fork) 
 
 
-For AI-assisted smart contract development available
+For AI-assisted smart contract development:
 - **VS Code**:  [here](https://code.visualstudio.com/download)
 - **GitHub Copilot** - [here](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
 
