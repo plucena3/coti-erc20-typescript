@@ -6,3 +6,4 @@ export * as mocks from "./mocks";
 export * as onboard from "./onboard";
 export * as token from "./token";
 export * as utils from "./utils";
+export { SimpleTest__factory } from "./SimpleTest__factory";

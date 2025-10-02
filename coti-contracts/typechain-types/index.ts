@@ -6,8 +6,6 @@ export type { openzeppelin };
 import type * as contracts from "./contracts";
 export type { contracts };
 export * as factories from "./factories";
-export type { Ownable } from "./@openzeppelin/contracts/access/Ownable";
-export { Ownable__factory } from "./factories/@openzeppelin/contracts/access/Ownable__factory";
 export type { IERC4906 } from "./@openzeppelin/contracts/interfaces/IERC4906";
 export { IERC4906__factory } from "./factories/@openzeppelin/contracts/interfaces/IERC4906__factory";
 export type { IERC721 } from "./@openzeppelin/contracts/token/ERC721/IERC721";
@@ -86,6 +84,8 @@ export type { PrivateERC20WalletMock } from "./contracts/mocks/wallet/PrivateERC
 export { PrivateERC20WalletMock__factory } from "./factories/contracts/mocks/wallet/PrivateERC20Wallet/PrivateERC20WalletMock__factory";
 export type { AccountOnboard } from "./contracts/onboard/AccountOnboard";
 export { AccountOnboard__factory } from "./factories/contracts/onboard/AccountOnboard__factory";
+export type { SimpleTest } from "./contracts/SimpleTest";
+export { SimpleTest__factory } from "./factories/contracts/SimpleTest__factory";
 export type { CAPIBARA } from "./contracts/token/CAPIBARA";
 export { CAPIBARA__factory } from "./factories/contracts/token/CAPIBARA__factory";
 export type { PERCI } from "./contracts/token/PERCI";

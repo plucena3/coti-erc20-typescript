@@ -19,8 +19,11 @@
     "on-chain-compute"
   ],
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "hardhat": "^2.22.8"
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "ethers": "^6.4.0",
+    "hardhat": "^2.22.8",
+    "solc": "^0.8.30"
   },
   "dependencies": {
     "@coti-io/coti-ethers": "^1.0.5",

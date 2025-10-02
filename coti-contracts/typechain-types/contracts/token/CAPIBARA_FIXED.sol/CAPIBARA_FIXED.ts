@@ -21,7 +21,7 @@ import type {
   TypedLogDescription,
   TypedListener,
   TypedContractMethod,
-} from "../../common";
+} from "../../../common";
 
 export type ItUint64Struct = { ciphertext: BigNumberish; signature: BytesLike };
 
@@ -48,7 +48,7 @@ export declare namespace IPrivateERC20 {
   };
 }
 
-export interface CAPIBARAInterface extends Interface {
+export interface CAPIBARA_FIXEDInterface extends Interface {
   getFunction(
     nameOrSignature:
       | "MAX_SUPPLY"
@@ -60,7 +60,6 @@ export interface CAPIBARAInterface extends Interface {
       | "balanceOf(address)"
       | "balanceOf()"
       | "decimals"
-      | "initialMint"
       | "mint"
       | "name"
       | "owner"
@@ -73,6 +72,7 @@ export interface CAPIBARAInterface extends Interface {
       | "transfer(address,uint256)"
       | "transferFrom(address,address,(uint256,bytes))"
       | "transferFrom(address,address,uint256)"
+      | "transferInitialSupply"
       | "transferOwnership"
   ): FunctionFragment;
 
@@ -111,10 +111,6 @@ export interface CAPIBARAInterface extends Interface {
     values?: undefined
   ): string;
   encodeFunctionData(functionFragment: "decimals", values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: "initialMint",
-    values?: undefined
-  ): string;
   encodeFunctionData(
     functionFragment: "mint",
     values: [AddressLike, BigNumberish]
@@ -155,6 +151,10 @@ export interface CAPIBARAInterface extends Interface {
     values: [AddressLike, AddressLike, BigNumberish]
   ): string;
   encodeFunctionData(
+    functionFragment: "transferInitialSupply",
+    values: [AddressLike]
+  ): string;
+  encodeFunctionData(
     functionFragment: "transferOwnership",
     values: [AddressLike]
   ): string;
@@ -189,10 +189,6 @@ export interface CAPIBARAInterface extends Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "decimals", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "initialMint",
-    data: BytesLike
-  ): Result;
   decodeFunctionResult(functionFragment: "mint", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "name", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
@@ -227,6 +223,10 @@ export interface CAPIBARAInterface extends Interface {
   ): Result;
   decodeFunctionResult(
     functionFragment: "transferFrom(address,address,uint256)",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "transferInitialSupply",
     data: BytesLike
   ): Result;
   decodeFunctionResult(
@@ -285,11 +285,11 @@ export namespace TransferEvent {
   export type LogDescription = TypedLogDescription<Event>;
 }
 
-export interface CAPIBARA extends BaseContract {
-  connect(runner?: ContractRunner | null): CAPIBARA;
+export interface CAPIBARA_FIXED extends BaseContract {
+  connect(runner?: ContractRunner | null): CAPIBARA_FIXED;
   waitForDeployment(): Promise<this>;
 
-  interface: CAPIBARAInterface;
+  interface: CAPIBARA_FIXEDInterface;
 
   queryFilter<TCEvent extends TypedContractEvent>(
     event: TCEvent,
@@ -370,8 +370,6 @@ export interface CAPIBARA extends BaseContract {
 
   decimals: TypedContractMethod<[], [bigint], "view">;
 
-  initialMint: TypedContractMethod<[], [void], "nonpayable">;
-
   mint: TypedContractMethod<
     [account: AddressLike, amount: BigNumberish],
     [void],
@@ -428,6 +426,12 @@ export interface CAPIBARA extends BaseContract {
     "nonpayable"
   >;
 
+  transferInitialSupply: TypedContractMethod<
+    [to: AddressLike],
+    [void],
+    "nonpayable"
+  >;
+
   transferOwnership: TypedContractMethod<
     [newOwner: AddressLike],
     [void],
@@ -481,9 +485,6 @@ export interface CAPIBARA extends BaseContract {
   getFunction(
     nameOrSignature: "decimals"
   ): TypedContractMethod<[], [bigint], "view">;
-  getFunction(
-    nameOrSignature: "initialMint"
-  ): TypedContractMethod<[], [void], "nonpayable">;
   getFunction(
     nameOrSignature: "mint"
   ): TypedContractMethod<
@@ -552,6 +553,9 @@ export interface CAPIBARA extends BaseContract {
     [bigint],
     "nonpayable"
   >;
+  getFunction(
+    nameOrSignature: "transferInitialSupply"
+  ): TypedContractMethod<[to: AddressLike], [void], "nonpayable">;
   getFunction(
     nameOrSignature: "transferOwnership"
   ): TypedContractMethod<[newOwner: AddressLike], [void], "nonpayable">;
