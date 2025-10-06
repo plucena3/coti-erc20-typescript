@@ -96,17 +96,19 @@ npx hardhat compile
 - ✅ **CAPIBARA.sol contract** compiled successfully
 - ✅ **Solidity version** 0.8.19 with optimizer enabled
 - ✅ **Type definitions** generated for TypeScript
+- ✅ **Gas optimization** configured for COTI network
 
 ### Key Configuration:
 - **Solidity Version:** 0.8.19
 - **Optimizer:** Enabled (runs: 10000)
 - **Network:** COTI Testnet
-- **Gas Settings:** Configured for COTI network requirements
+- **Gas Settings:** 2.1M gas limit, 1 gwei gas price
 
-**Compilation output:**
+## Step 3: Deploy CAPIBARA Token ✅ COMPLETED
 
+**Status: ✅ Successfully deployed to COTI Testnet**
 
-## Step 3: Create Deployment Script with Copilot
+**Deployed Contract Address:** `0xcdbaA8A6afC275b3F5DfD3ee1916049C4213E885`
 
 ### Using Copilot to Generate the Deployment Script
 
@@ -182,55 +184,139 @@ Pre-minted To: 0x9b7384D697E5c9Fac557c035c0C0837a4221875c
 
 > 🔍 **MetaMask Integration**: Encrypted values will be visible in MetaMask, showing the confidential nature of the token balances.
 
-## Step 4: Check the balance using the Metamask COTI Snap
+## Step 4: Mint Additional Tokens ✅ COMPLETED
 
-You can check that the token was correctly minting by acessing the Metamask COTI Snap.  
-On the tokens tab click import and enter the address of the deployed contract
+**Status: ✅ Successfully minted 50,000 additional CAPI tokens**
 
-![A snapshot of the coti application](coti-snap.png)
+### Minting Script Created
 
+The minting script (`mint-capibara.ts`) was created to handle additional token minting with comprehensive validation and error handling.
 
-## Step 5: Create Token Minting Script with Copilot
-
-### Using Copilot to Generate the Minting Script
-
-**Execute this prompt in Copilot:**
-
-```
-🤖 GITHUB COPILOT
-
-@mint.ts @CAPIBARA.sol
-
-Given @CAPIBARA.sol deployed at YOUR_CONTRACT_ADDRESS, write a hardhat script to call the mint function similar to @mint.ts
-
-The script should:
-- Connect to the deployed CAPIBARA contract
-- Call the mint function with proper parameters
-- Handle the confidential token minting process
-- Display transaction details and confirmation
-- Show the minted amount in both raw and formatted values
-```
-
-### Run the Minting Script
+### Execute Minting
 
 ```bash
  🖥️ TERMINAL
 
-npx hardhat run scripts/mintCapibara.ts --network coti-testnet
+npx hardhat run scripts/mint-capibara.ts --network coti-testnet
 ```
 
-**Expected output:**
+### Actual Minting Output:
 
 ```
-Attempting to call mint on CAPIBARA contract at 0xa7ca50518d4D535bBF239CcbeCCf1CF645bdB692
-Minting tokens to: 0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8
-Value (smallest units): 5000000000
-Value (whole tokens): 5000
-Using deployer account (owner and recipient for minting): 0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8
-Transaction sent: 0x7b91a7bd3f805a100951e4a89d0b9de988c280d3512ac6e94e9d8001ea8ab7e5
-Transaction confirmed: 0x7b91a7bd3f805a100951e4a89d0b9de988c280d3512ac6e94e9d8001ea8ab7e5
-mint called successfully! 5000 CAPI tokens (value: 5000000000) minted to 0xfAF7e0962B79675cd046C4c0bF41beEb27FCc5C8.
+🪙 Starting CAPIBARA Token Minting Process...
+✅ Connected with account: 0xe45FC1a7D84e73C8c71EdF2814E7467F7C86a8A2
+✅ Owner verification passed
+📊 Current Total Supply: 150,000.0 CAPI
+🚀 Executing mint transaction...
+📤 Transaction submitted: 0x24501fd1524c84ecc59968d39175f575992f1eacccc63f84acade7f2127a64df
+✅ Transaction confirmed in block: 3587292
+📊 New State:
+   Total Supply: 200,000.0 CAPI
+   Supply Increased: 50,000.0 CAPI
+🎉 CAPIBARA Token Minting Completed Successfully!
 ```
+
+### Minting Summary:
+- ✅ **Recipient**: `0xe45FC1a7D84e73C8c71EdF2814E7467F7C86a8A2`
+- ✅ **Amount Minted**: 50,000 CAPI tokens
+- ✅ **New Total Supply**: 200,000 CAPI tokens
+- ✅ **Transaction Hash**: `0x24501fd1524c84ecc59968d39175f575992f1eacccc63f84acade7f2127a64df`
+
+## Step 5: Check Balance with Decryption ✅ COMPLETED
+
+**Status: ✅ Successfully retrieved and decrypted balance**
+
+### Balance Checking Script
+
+The balance checker script (`check-balance-simple.ts`) retrieves encrypted balances and decrypts them using the account's AES key.
+
+### Check Balance
+
+```bash
+ 🖥️ TERMINAL
+
+npx hardhat run scripts/check-balance-simple.ts --network coti-testnet
+```
+
+### Actual Balance Output:
+
+```
+🔍 CAPIBARA Token Balance Checker (Simple)
+✅ Connected account: 0xe45FC1a7D84e73C8c71EdF2814E7467F7C86a8A2
+
+📝 Token Information:
+   Name: CAPIBARA Token
+   Symbol: CAPI
+   Decimals: 6
+   Total Supply: 200000.0 CAPI
+
+📊 Account Balance:
+   Raw Balance (ctUint64): 28398688016154539750916709815651057495300987299431194165888208848409118572830
+   🔓 Attempting to decrypt...
+   ✅ Decrypted Balance: 50,000.0 CAPI
+```
+
+### Balance Summary:
+- ✅ **Account**: `0xe45FC1a7D84e73C8c71EdF2814E7467F7C86a8A2`
+- ✅ **Decrypted Balance**: 50,000 CAPI tokens
+- ✅ **Encryption Working**: Balance is properly encrypted on-chain
+- ✅ **Decryption Working**: AES key successfully decrypts the balance
+
+### Environment Configuration
+
+Make sure your `.env` file contains:
+
+```.env
+PRIVATE_KEY=your_deployer_private_key
+SIGNING_KEYS=your_deployer_private_key
+USER_KEYS=your_aes_encryption_key
+```
+
+> 🔐 **Important**: The `USER_KEYS` value is your AES encryption key obtained during account onboarding. This is required to decrypt confidential balances.
+
+## Step 6: Use COTI MetaMask Snap (Optional)
+
+You can also check balances using the Metamask COTI Snap:
+- On the tokens tab, click import and enter the contract address: `0xcdbaA8A6afC275b3F5DfD3ee1916049C4213E885`
+- The snap will automatically decrypt and display your token balance
+
+![A snapshot of the coti application](coti-snap.png)
+
+---
+
+## 🎉 Project Completion Summary
+
+### ✅ All Steps Successfully Completed!
+
+This tutorial has successfully demonstrated the complete lifecycle of a COTI Private ERC-20 token:
+
+#### **Achievements:**
+1. ✅ **Contract Creation**: CAPIBARA token contract with full privacy features
+2. ✅ **Compilation**: Successfully compiled with Solidity 0.8.19
+3. ✅ **Deployment**: Deployed to COTI Testnet at `0xcdbaA8A6afC275b3F5DfD3ee1916049C4213E885`
+4. ✅ **Initial Minting**: 100,000 CAPI tokens minted to `0x9b7384D697E5c9Fac557c035c0C0837a4221875c`
+5. ✅ **Additional Minting**: 50,000 CAPI tokens minted to `0xe45FC1a7D84e73C8c71EdF2814E7467F7C86a8A2`
+6. ✅ **Balance Decryption**: Successfully retrieved and decrypted token balances
+
+#### **Final Token State:**
+- **Total Supply**: 200,000 CAPI tokens
+- **Contract Address**: `0xcdbaA8A6afC275b3F5DfD3ee1916049C4213E885`
+- **Owner**: `0xe45FC1a7D84e73C8c71EdF2814E7467F7C86a8A2`
+- **Network**: COTI Testnet
+- **Privacy**: Full on-chain encryption with MPC
+
+#### **Scripts Created:**
+- `deploy-capibara-clean.ts` - Deployment script
+- `mint-capibara.ts` - Token minting script
+- `check-balance-simple.ts` - Balance checking with decryption
+
+#### **Key Learnings:**
+- 🔐 **Privacy First**: All balances encrypted on-chain using COTI's MPC
+- 🔑 **AES Keys**: Required for decrypting confidential values
+- ⚡ **Gas Optimization**: Configured for COTI network requirements
+- 🛡️ **Security**: Owner-only minting with supply cap protection
+
+---
 
 ## Understanding COTI's Confidential Computing
 
